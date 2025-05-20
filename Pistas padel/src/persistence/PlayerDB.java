@@ -18,7 +18,7 @@ public class PlayerDB {
      * @param password 
      * @return o xogador
      */
-    private static Player findByIdAndPassword(String id, String password) {
+    public static Player findByIdAndPassword(String id, String password) {
         
         Player player = PadelManagerDB.getPlayers().get(id);
         

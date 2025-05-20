@@ -44,4 +44,12 @@ public class BookingDB {
         
         return bookings;
     }
+    
+    /**
+     * 
+     * @param booking 
+     */
+    public static void save(Booking booking) {
+        PadelManagerDB.getBookings().add(booking);
+    }
 }

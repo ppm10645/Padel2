@@ -6,6 +6,7 @@ package view;
 
 import controller.InitMenuController;
 import java.util.Scanner;
+import persistence.PlayerDB;
 
 /**
  *
@@ -27,18 +28,24 @@ public class InitMenuView {
         System.out.println("Os datos introducidos non son correctos");
     }
     
+    /**
+     * Menu de inicio de sesion
+     * @return 
+     */
     public boolean showLoginMenu() {
-        System.out.println("Introduzca o id de usuario");
-        String id = scanner.nextLine();
+        System.out.println("Introduzca o id de usuario para iniciar sesión, deixe baleiro para sair da aplicación");
         
-        if(id == null) {
+        String loginpasswrd;
+        String loginid = scanner.nextLine();
+        
+        if(loginid.isEmpty()){
             return true;
         } else {
             System.out.println("Introduzca o contrasinal");
-            String pass = scanner.nextLine().System.console().readPassword().toString();
+            loginpasswrd = scanner.nextLine();
+            controller.login(loginid, loginpasswrd);
         }
-        
-        return false;
+        return false;  
     }
     
     

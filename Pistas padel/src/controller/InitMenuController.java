@@ -24,8 +24,9 @@ public class InitMenuController {
     /**
      * Inicia a aplicacion mostrando o menu da vista hata que este devolva true
      */
+    @SuppressWarnings("empty-statement")
     public void initApp() {
-        while (!view.showLoginMenu);
+        while (!view.showLoginMenu());
     }
 
     /**
